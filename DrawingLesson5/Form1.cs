@@ -1,4 +1,4 @@
-using System.Drawing;
+п»їusing System.Drawing;
 using System.Drawing.Drawing2D;
 
 namespace DrawingLesson5
@@ -38,17 +38,17 @@ namespace DrawingLesson5
                      new Point(130, 57)
             };
             GraphicsPath path = new GraphicsPath();
-            // рисуем первую траекторию path.StartFigure();
+            // СЂРёСЃСѓРµРј РїРµСЂРІСѓСЋ С‚СЂР°РµРєС‚РѕСЂРёСЋ path.StartFigure();
             path.AddEllipse(170, 170, 100, 50);
-            // заливаем траекторию цветом
+            // Р·Р°Р»РёРІР°РµРј С‚СЂР°РµРєС‚РѕСЂРёСЋ С†РІРµС‚РѕРј
             graphics.FillPath(Brushes.Aqua, path);
-            // рисуем вторую траекторию
+            // СЂРёСЃСѓРµРј РІС‚РѕСЂСѓСЋ С‚СЂР°РµРєС‚РѕСЂРёСЋ
             path.StartFigure();
             path.AddCurve(points, 0.5F);
             path.AddArc(100, 50, 100, 100, 0, 120);
 
             path.AddLine(50, 150, 50, 220);
-            // Закрываем траекторию
+            // Р—Р°РєСЂС‹РІР°РµРј С‚СЂР°РµРєС‚РѕСЂРёСЋ
             path.AddArc(180, 30, 60, 60, 0, -170);
             path.CloseFigure();
             graphics.DrawPath(new Pen(Color.Blue, 3), path);
